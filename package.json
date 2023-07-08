@@ -1,0 +1,23 @@
+{
+  "name": "inquirer",
+  "version": "8.2.4",
+  "description": "Create SVG file based on user input from Node.js",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MerelJac/SVGgenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MerelJac/SVGgenerator/issues"
+  },
+  "homepage": "https://github.com/MerelJac/SVGgenerator#readme"
+}

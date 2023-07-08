@@ -1,0 +1,1 @@
+// check if color or hex is valid ofr text and shape
