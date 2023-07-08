@@ -40,7 +40,7 @@ class SVGcreate{
         this.shape = shape,
         this.shapeColor = shapeColor
         if (shape == "circle") {
-            svgFile = `<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><circle cx="25" cy="75" r="20" stroke="${this.shapeColor}" fill="${this.shapeColor}" stroke-width="5"/><text x="0" y="50" font-family="Verdana" font-size="35" fill="${this.textColor}">${this.text}</text></g></svg>`;
+            svgFile = `<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><circle cx="100" cy="100" r="98" stroke="${this.shapeColor}" fill="${this.shapeColor}" stroke-width="5"/><text x="0" y="50" font-family="Verdana" font-size="35" fill="${this.textColor}">${this.text}</text></g></svg>`;
         } else if (shape == "square") {
             svgFile = `<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><rect x="10" y="10" width="30" height="30" stroke="${this.shapeColor}" fill="${this.shapeColor}" stroke-width="5"/><text x="0" y="50" font-family="Verdana" font-size="35" fill="${this.textColor}">${this.text}</text></g></svg>`;
         } else if (shape == "triangle") {
@@ -61,7 +61,7 @@ function writeFiles(answers) {
     // this needs to run to define svgFile variable
     new SVGcreate(answers.letters, answers.textColor, answers.shape, answers.shapeColor);
     // passes filepath, contents, error
-    fs.writeFile('logo.svg', svgFile, (err) => {
+    fs.writeFile('./lib/logo.svg', svgFile, (err) => {
         err ? console.error(err) : console.log("Success")
     } )
 }
