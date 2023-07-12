@@ -1,6 +1,6 @@
 {
-  "name": "inquirer",
-  "version": "8.2.4",
+  "name": "jest",
+  "version": "29.6.1",
   "description": "Create SVG file based on user input from Node.js",
   "main": "index.js",
   "directories": {
