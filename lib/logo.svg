@@ -1,1 +1,1 @@
-<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><circle cx="100" cy="100" r="98" stroke="pink" fill="pink" stroke-width="5"/><text x="0" y="50" font-family="Verdana" font-size="35" fill="yellow">mim</text></g></svg>
+<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><circle cx="100" cy="100" r="98" stroke="circle" fill="circle" stroke-width="5"/><text x="0" y="50" font-family="Verdana" font-size="35" fill="green">go</text></g></svg>
