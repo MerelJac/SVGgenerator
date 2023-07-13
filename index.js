@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const { error } = require('console');
 const Shape = require('./lib/shapes');
-// const testShapes = require('./lib/shapes.test')
+// const validateAnswers = require('./lib/shapes.test')
 
 // prepare questions for inquier
 const questions = [{    
@@ -20,24 +20,17 @@ const questions = [{
 }, {
     type: "input",
     name: "textColor",
-    message: "What color would you like your TEXT? Accepts keyword or Hex Code:",
+    message: "What color would you like your TEXT? Accepts word or Hex Code beginning with #:",
 }, {
     type: "list",
     name: "shape",
     message: "Pick the shape of your logo:",
     choices: ["circle", "square", "triangle"]
 },
-// {
-//     type: "list",
-//     name: "typeOfColor",
-//     message: "Will you enter color word or Hex Code?",
-//     choices: ["Word", "Hex Code"],
-
-// }, 
     {
     type: "input",
     name: "shapeColor",
-    message: "What color would you like your SHAPE? Accepts keyword or Hex Code:",
+    message: "What color would you like your SHAPE? Accepts word or Hex Code beginning with #:",
 }
 ];
 
@@ -52,6 +45,7 @@ function writeFiles(result) {
 function init() {
     inquirer.prompt(questions)
     .then(answers => {
+        validateAnswers(answers);
         let shape;
         if (answers.shape == "circle") {
             shape = Shape.prototype.circle(answers.letters, answers.textColor, answers.shapeColor);
