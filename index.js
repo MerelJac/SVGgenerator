@@ -2,8 +2,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { error } = require('console');
-const shapeFile = require('./lib/shapes');
 const Shape = require('./lib/shapes');
+// const testShapes = require('./lib/shapes.test')
 
 // prepare questions for inquier
 const questions = [{    
@@ -26,7 +26,15 @@ const questions = [{
     name: "shape",
     message: "Pick the shape of your logo:",
     choices: ["circle", "square", "triangle"]
-}, {
+},
+// {
+//     type: "list",
+//     name: "typeOfColor",
+//     message: "Will you enter color word or Hex Code?",
+//     choices: ["Word", "Hex Code"],
+
+// }, 
+    {
     type: "input",
     name: "shapeColor",
     message: "What color would you like your SHAPE? Accepts keyword or Hex Code:",
@@ -46,13 +54,14 @@ function init() {
     .then(answers => {
         let shape;
         if (answers.shape == "circle") {
-            shape = Shape.prototype.circle(answers.letters, answers.textColor, answers.shape, answers.shapeColor);
+            shape = Shape.prototype.circle(answers.letters, answers.textColor, answers.shapeColor);
         } if (answers.shape == "square") {
-            shape = Shape.prototype.square(answers.letters, answers.textColor, answers.shape, answers.shapeColor)
+            shape = Shape.prototype.square(answers.letters, answers.textColor, answers.shapeColor)
         } if (answers.shape == "triangle") {
-            shape = Shape.prototype.triangle(answers.letters, answers.textColor, answers.shape, answers.shapeColor)
-        }
-        return shape
+            shape = Shape.prototype.triangle(answers.letters, answers.textColor, answers.shapeColor)
+        };
+        return shape;
+        
     })
     .then(result => {
         writeFiles(result)
