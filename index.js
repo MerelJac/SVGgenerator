@@ -45,7 +45,6 @@ function writeFiles(result) {
 function init() {
     inquirer.prompt(questions)
     .then(answers => {
-        validateAnswers(answers);
         let shape;
         if (answers.shape == "circle") {
             shape = Shape.prototype.circle(answers.letters, answers.textColor, answers.shapeColor);
